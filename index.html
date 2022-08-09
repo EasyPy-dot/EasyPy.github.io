@@ -19,6 +19,13 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     </head>
+    <style>
+	 .discss{
+	      pointer-events:none;
+	      color:#afafaf;
+	      cursor:default
+	  }
+    </style>
     <body id="page-top">
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
@@ -153,7 +160,7 @@
                 </div>
 				<!-- Examples Section Button-->
                 <div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-primary" href="https://fubon-easypy.github.io" download="description file">
+                    <a class="btn btn-xl btn-outline-primary @if($user_type !== 0) discss @endif" href="{{ route('devicetype/edit', ['device_type' => $device_type->id]) }}" download="description file">
                         <i class="fas fa-download me-2"></i>
                         Download Examples File!
                     </a>
