@@ -69,8 +69,7 @@
 			    <br>2.使用系統管理員權限開啟CMD.
 			    <br>3.指令: cd /d 至e01api根目錄.(如C:\Fubon e01\API3)
 			    <br>4.指令: InstallFubonE01API2.bat.(或假設e01根目錄為C:\Fubon e01\可直接更改此批次檔, 如下.
-			    <br>  第二行cd / "C:\Fubon e01\API3\"及第三行SET PATH=%PATH%;C:\Fubon e01\;C:\Fubon e01\API3\;)
-			    
+			    <br>  第二行cd / "C:\Fubon e01\API3\"及第三行SET PATH=%PATH%;C:\Fubon e01\;C:\Fubon e01\API3\;) 
 		    </p>
 		    <p class="lead">
 			    這裡我們為了簡化使用者的安裝流程, 提供一個Batch檔, 若用戶安裝E01時使用原設定值進行, 那麼在個人電腦中會將E01安裝至產相對應的位置(C:\Fubon e01\API3), 用戶可以直接下載Batch檔放置C:\Fubon e01\API3\執行它; 若用戶將E01安裝於其它位置, 也只要將Batch檔用文字檔開啟後修正("%~dp0")至對應的位置後存檔, 或將Batch檔存放至API3相同目錄下即可執行.
@@ -82,6 +81,17 @@
                         <i class="fas fa-download me-2"></i>
                         Download Batch File!
                     </a>
+                </div>
+		<!--E01API加工-->
+		<div class="row">
+		    <p class="lead">
+			    另外, 因為E01 API封穿後使用並不直觀, 且許多查詢使用REQ/REP方式回傳XML格式. 故這裡我們重新進行封穿並產生相對應的說明與使用文件.
+			    <a href="EasyPyOrders/html/index.html"><i class="fa fa-dribbble fa-4x"></i>EasyPyOrders</a>
+		    </p>
+		    <a class="btn btn-xl btn-outline-light" href="EasyPyOrders/EasyPyOrders.pdf" download="EasyPyOrders.pdf">
+                        <i class="fas fa-download me-2"></i>
+                        Download EasyPyOrders PDF!
+                    </a>             
                 </div>
             </div>
         </header>
