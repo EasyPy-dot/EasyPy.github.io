@@ -84,16 +84,32 @@
                     </a>
                 </div>
 		<style>
-			a:hover {
-			  color: red;
-			  background-color: transparent;
-			  text-decoration: underline;
-		</style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: violet;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
 		<!--E01API加工-->
 		<div class="row">
 		    <p class="lead">
 			    另外, 因為E01 API封裝後使用並不直觀, 且許多查詢使用REQ/REP方式回傳XML格式. 故這裡我們重新將E01API進行封裝, 使用.NET特有的Delegate(委派)來調整查詢回傳機制, 並產生相對應的說明與使用文件.
-			    <a href="EasyPyOrders/html/index.html" target="_blank" style="color:violet">
+			    <a href="EasyPyOrders/html/index.html" target="_blank">
 				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
 				    EasyPyOrders HTML
 			    </a>
@@ -109,7 +125,7 @@
 		<div class="row">
 		    <p class="lead">
 			    此外, 為了服務廣大的程式交易客群, 我們也規劃提供國內外行情資訊API, 用戶只要透過簡單的幾行程式碼即可訂閱相關的RealTime Data, 並產生相對應的說明與使用文件.
-			    <a href="EasyPyConsumer/html/index.html" target="_blank" style="color:violet">
+			    <a href="EasyPyConsumer/html/index.html" target="_blank">
 				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
 				    EasyPyConsumer HTML
 			    </a>
