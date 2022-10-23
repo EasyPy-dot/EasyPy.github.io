@@ -262,6 +262,19 @@ a:active {
                     <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyPy-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python與E01 API間的溝通, 除了進行基本的委託控管(價量)防止金手指事件外, 也方便使用者進行部位管理與制訂演算法, 讓用戶享有更多元的交易方式.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">另外, 我們的服務包含各類EA策略系統(STS, XQ, MultiCharts, Excel, R語言及Python). 因此, EasyPy-Chi亦可視為下單機器人, 在讀取買賣訊號及選股標的後, 協助這類EA系統完成交易或執行其它演算法交易, 並進行後續的部位管理工作.</p></div>
                 </div>
+		<div class="row">
+		    <p class="lead">
+			    第一部份: 交易機器人透過監控資料夾是否有異動.
+			    <br>1.我們建立一支Windows Service程式來監控特定資料夾內的檔案是否發生異動.
+			    <br>2.安裝成功時, 用戶電腦在..\Program Files\Fubon-EasyPy\MonitorService\下建立相關程式, 檔案與組件.
+			    <br>3.若欲新增監控路徑, 可在上述根目錄內修改MonitorService.ini. 新增相對路徑(在根目錄內新增資料夾)及絶對路徑.
+			    <br>4.MonitorService相關安裝及操作說明.			    
+			    <br>5.安裝程式如下.
+		    </p>
+		    <p class="lead">
+			    這裡我們為了簡化使用者的安裝流程, 提供一個Batch檔, 若用戶安裝E01時使用原設定值進行, 那麼在個人電腦中會將E01安裝至產相對應的位置(C:\Fubon e01\API3), 用戶可以直接下載Batch檔放置C:\Fubon e01\API3\執行它; 若用戶將E01安裝於其它位置, 也只要將Batch檔用文字檔開啟後修正("%~dp0")至對應的位置後存檔, 或將Batch檔存放至API3相同目錄下即可執行.
+		    </p>             
+                </div>
                 <!-- Robot Section Button-->
                 <div class="text-center mt-4">
 		<!--
