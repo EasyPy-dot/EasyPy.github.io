@@ -40,7 +40,7 @@
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#portfolio" title="功能">Functions</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#about" title="描述">Description</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#contact" title="範例">Examples</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#robot" title="機器人">Robot</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#robot" title="交易機器人">Robot</a></li>
 		    </ul>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                 <!-- Masthead Avatar Image-->
                 <img class="masthead-avatar mb-5" src="assets/img/python1.jfif" alt="..." />
                 <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Start Fubon-EasyPy</h1>
+                <h1 class="masthead-heading text-uppercase mb-0">Start Fubon-EasyAPI</h1>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-darken">
                     <div class="divider-custom-line"></div>
@@ -65,16 +65,24 @@
 	    <div class="container">
 	        <div class="row">
 		    <p class="lead">
-			    因為官網對於E01 API的安裝說明並不是很明確, 故這裡我們補充說明並提供相對應的批次檔協助安裝.
+			    優化官網對於E01 API的安裝說明, 並提供一次安裝上手包, 讓客戶便利且快速可以使用下單API.
+			    <br>一次安裝上手包安裝步驟
+			    <br>1. 先下載安裝富邦E01, 指定安裝路徑(C:\Fubon e01).
+			    <br>2. 下載Batch檔並執行.
+		    </p>
+		    <p class="lead">
+			    若無法執行安裝上手包, 請依以下步驟執行
 			    <br>1.先下載安裝富邦E01.
 			    <br>2.使用系統管理員權限開啟CMD.
 			    <br>3.指令: cd /d 至e01api根目錄.(如C:\Fubon e01\API3)
 			    <br>4.指令: InstallFubonE01API2.bat.(或假設e01根目錄為C:\Fubon e01\可直接更改此批次檔, 如下.
 			    <br>  第二行cd / "C:\Fubon e01\API3\"及第三行SET PATH=%PATH%;C:\Fubon e01\;C:\Fubon e01\API3\;) 
 		    </p>
+		    <!--
 		    <p class="lead">
 			    這裡我們為了簡化使用者的安裝流程, 提供一個Batch檔, 若用戶安裝E01時使用原設定值進行, 那麼在個人電腦中會將E01安裝至產相對應的位置(C:\Fubon e01\API3), 用戶可以直接下載Batch檔放置C:\Fubon e01\API3\執行它; 若用戶將E01安裝於其它位置, 也只要將Batch檔用文字檔開啟後修正("%~dp0")至對應的位置後存檔, 或將Batch檔存放至API3相同目錄下即可執行.
-		    </p>             
+		    </p>
+		    -->          
                 </div>
 		<!-- Download Batch File Button-->
                 <div class="text-center mt-4">
@@ -108,20 +116,21 @@ a:active {
 		<!--E01API加工-->
 		<div class="row">
 		    <p class="lead">
-			    另外, 因為E01 API封裝後使用並不直觀, 且許多查詢使用REQ/REP方式回傳XML格式. 故這裡我們重新將E01API進行封裝, 使用.NET特有的Delegate(委派)來調整查詢回傳機制, 並產生相對應的說明與使用文件.
+			    網頁式E01API文件: 提供網頁式說明與PDF使用文件, 方便使用者查詢API函式, 使用者可以透過連結方式觀看自己有興趣的部份, 不需從頭至尾看完整份文件資料.
 			    <a href="EasyPyOrders/html/index.html" target="_blank">
 				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
-				    EasyPyOrders HTML
+				    EasyAPIOrders HTML
 			    </a>
 		    </p>		             
                 </div>
 		<div class="text-center mt-4">
-                    <a class="btn btn-xl btn-outline-light" href="EasyPyOrders/EasyPyOrders.pdf" download="EasyPyOrders.pdf">
+                    <a class="btn btn-xl btn-outline-light" href="EasyPyOrders/EasyAPIOrders.pdf" download="EasyAPIOrders.pdf">
                         <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
-                        EasyPyOrders PDF!
+                        EasyAPIOrders PDF!
                     </a>    
                 </div>
 		<!--行情API-->
+		<!--
 		<div class="row">
 		    <p class="lead">
 			    此外, 為了服務廣大的程式交易客群, 我們也規劃提供國內外行情資訊API, 用戶只要透過簡單的幾行程式碼即可訂閱相關的RealTime Data, 並產生相對應的說明與使用文件.
@@ -137,6 +146,7 @@ a:active {
                         EasyPyConsumer PDF!
                     </a>    
                 </div>
+                -->
             </div>
         </header>
 	
@@ -194,6 +204,7 @@ a:active {
             </div>
         </section>
         <!-- Description Section-->
+	<!--
         <section class="page-section bg-primary text-white mb-0" id="about">
             <div class="container">
                 <!-- Description Section Heading-->
@@ -207,7 +218,7 @@ a:active {
                 <!-- Description Section Content-->
                 <div class="row">
                     <div class="col-lg-4 ms-auto"><p class="lead">因為系統架構原故, EasyPy後端仍是介接原e01 API(未來另有規劃!). 為了讓用戶專注於交易策略開發, 故我們在EasyPy與e01 API間建立管理介面, 除了進行基本的委託控管(價量), 也方便使用者進行部位管理與制訂演算法交易. 而做為自建式的程式交易組件, 我們除了提供市場行情(縱斷面)外, 也提供部份總經數據及市場數據, 讓用戶開發橫斷面交易策略.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">@經紀商品部/程式交易科 是一個專注於程式、演算法及高頻交易的服務團隊, 我們的成員包含各類EA交易系統(STS, XQ, MultiCharts, Excel, R語言及Python)講師, 專業且親切的客服同仁, 以及專注於系統開發的經理人及工程師. 另外, 有別於其他團隊, 我們還加入了策略評量師與風險管理師等來服務廣大的程式交易客群.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">@Q TEAM 是一個專注於程式、演算法及高頻交易的服務團隊, 我們的成員包含各類EA交易系統(STS, XQ, MultiCharts, Excel, R語言及Python)講師, 專業且親切的客服同仁, 以及專注於系統開發的經理人及工程師. 另外, 有別於其他團隊, 我們還加入了策略評量師與風險管理師等來服務廣大的程式交易客群.</p></div>
                 </div>
                 <!-- Description Section Button-->
                 <div class="text-center mt-4">
@@ -218,7 +229,9 @@ a:active {
                 </div>
             </div>
         </section>
+        -->
         <!-- Examples Section-->
+        <!--
         <section class="page-section" id="contact">
             <div class="container">
                 <!-- Examples Section Heading-->
@@ -246,11 +259,12 @@ a:active {
                 </div>
             </div>
         </section>
+        -->
 	<!-- Robot Section-->
         <section class="page-section bg-primary text-white mb-0" id="robot">
             <div class="container">
                 <!-- Description Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white" data-toggle="tooltip" title="機器人">Robot</h2>
+                <h2 class="page-section-heading text-center text-uppercase text-white" data-toggle="tooltip" title="機器人">交易機器人Robot</h2>
                 <!-- Icon Divider-->
                 <div class="divider-custom divider-darken">
                     <div class="divider-custom-line"></div>
@@ -259,13 +273,17 @@ a:active {
                 </div>
                 <!-- Description Section Content-->
                 <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyPy-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python與E01 API間的溝通, 除了進行基本的委託控管(價量)防止金手指事件外, 也方便使用者進行部位管理與制訂演算法, 讓用戶享有更多元的交易方式.</p></div>
+		    <!--
+                    <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyAPI-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python與E01 API間的溝通, 除了進行基本的委託控管(價量)防止金手指事件外, 也方便使用者進行部位管理與制訂演算法, 讓用戶享有更多元的交易方式.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">另外, 我們的服務包含各類EA策略系統(STS, XQ, MultiCharts, Excel, R語言及Python). 因此, EasyPy-Chi亦可視為下單機器人, 在讀取買賣訊號及選股標的後, 協助這類EA系統完成交易或執行其它演算法交易, 並進行後續的部位管理工作.</p></div>
+                    -->		    
+                    <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyAPI-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python(建置中~)與E01 API間的溝通.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">交易機器人ROBOT, 主要功能在讀取買賣訊號及選股標的, 以完成後續交易流程. 支援STS, XQ, MultiCharts, Excel及R等所產生的買賣訊號, 並透過E01API完成交易.</p></div>
                 </div>
 		<div class="row">
 		    <p class="lead">
 			    第一部份: 交易機器人透過監控資料夾是否有異動.
-			    <br>1.我們建立一支Windows Service程式來監控特定資料夾內的檔案是否發生異動.
+			    <br>1.建立交易機器人程式監控特定資料夾內的檔案是否發生異動.
 			    <br>2.安裝成功時, 用戶電腦在..\Program Files\Fubon-EasyPy\MonitorService\下建立相關程式, 檔案與組件.
 			    <br>3.若欲新增監控路徑, 可在上述根目錄內修改MonitorService.ini. 新增相對路徑(在根目錄內新增資料夾)及絶對路徑.
 			    <br>4.MonitorService相關安裝及操作說明.	
@@ -298,7 +316,7 @@ a:active {
 							<br><br><i class="fas fa-phone fa-fw fa-1x" style="color:aqua"></i>
 								02-87716888 #61342
 							<br><br><i class='fas fa-address-book fa-fw fa-1x' style="color:#006400"></i>
-								@經紀商品部/程式交易科						
+								@Q TEAM						
                         </h6>
                     </div>
                     <!-- Footer Social Icons-->
@@ -321,10 +339,10 @@ a:active {
                     </div>
                     <!-- Footer About Text-->
                     <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">About @經紀商品部/程式交易科</h4>
+                        <h4 class="text-uppercase mb-4">About @Q TEAM</h4>
                         <p class="lead mb-0">
-                            @經紀商品部/程式交易科 是一個專業的服務團隊, 我們負責開發、評量及訓練有關程式交易的相關業務.
-                            <br><a href="#!">@經紀商品部/程式交易科</a>               
+                            @Q TEAM 是富邦證券一個專業的服務團隊, 我們負責開發、評量及訓練有關程式交易的相關業務.
+                            <br><a href="#!">@Q TEAM</a>               
                         </p>
                     </div>
                 </div>
@@ -332,7 +350,7 @@ a:active {
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Fubon-EasyPy Website 2022</small></div>
+            <div class="container"><small>Copyright &copy; Fubon-EasyAPI Website 2022</small></div>
         </div>
         <!-- Portfolio Modals-->
         <!-- Portfolio Modal 1-->
