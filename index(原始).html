@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Fubon-EasyPy @QTeam</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+	 .discss{
+	      pointer-events:none;
+	      color:#afafaf;
+	      cursor:default
+	  }
+    </style>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand" href="#page-top">Fubon Securities Co., Ltd.</a>
+                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#portfolio" title="功能">Functions</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#about" title="描述">Description</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#contact" title="範例">Examples</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" data-toggle="tooltip" href="#robot" title="交易機器人">Robot</a></li>
+		    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Masthead-->
+        <header class="masthead bg-primary text-white">
+            <div class="container d-flex align-items-center flex-column  text-center">
+                <!-- Masthead Avatar Image-->
+                <img class="masthead-avatar mb-5" src="assets/img/python1.jfif" alt="..." />
+                <!-- Masthead Heading-->
+                <h1 class="masthead-heading text-uppercase mb-0">Start Fubon-EasyAPI</h1>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-darken">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Masthead Subheading-->
+                <p class="masthead-subheading font-weight-light mb-0">API Artist - Python Designer - Enginner</p>
+            </div>
+	    
+	    <div class="container">
+	        <div class="row">
+		    <p class="lead">
+			    優化官網對於E01 API的安裝說明, 並提供一次安裝上手包, 讓客戶便利且快速可以使用下單API.
+			    <br>一次安裝上手包安裝步驟
+			    <br>1. 先下載安裝富邦E01, 指定安裝路徑(C:\Fubon e01).
+			    <br>2. 下載Batch檔並執行.
+		    </p>
+		    <p class="lead">
+			    若無法執行安裝上手包, 請依以下步驟執行
+			    <br>1.先下載安裝富邦E01.
+			    <br>2.使用系統管理員權限開啟CMD.
+			    <br>3.指令: cd /d 至e01api根目錄.(如C:\Fubon e01\API3)
+			    <br>4.指令: InstallFubonE01API2.bat.(或假設e01根目錄為C:\Fubon e01\可直接更改此批次檔, 如下.
+			    <br>  第二行cd / "C:\Fubon e01\API3\"及第三行SET PATH=%PATH%;C:\Fubon e01\;C:\Fubon e01\API3\;) 
+		    </p>
+		    <!--
+		    <p class="lead">
+			    這裡我們為了簡化使用者的安裝流程, 提供一個Batch檔, 若用戶安裝E01時使用原設定值進行, 那麼在個人電腦中會將E01安裝至產相對應的位置(C:\Fubon e01\API3), 用戶可以直接下載Batch檔放置C:\Fubon e01\API3\執行它; 若用戶將E01安裝於其它位置, 也只要將Batch檔用文字檔開啟後修正("%~dp0")至對應的位置後存檔, 或將Batch檔存放至API3相同目錄下即可執行.
+		    </p>
+		    -->          
+                </div>
+		<!-- Download Batch File Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="file/install_e01api.bat" download="install_e01api.bat">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        Batch File!
+                    </a>
+                </div>
+		<style>
+a:link {
+  color: green;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: violet;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+		<!--E01API加工-->
+		<div class="row">
+		    <p class="lead">
+			    網頁式E01API文件: 提供網頁式說明與PDF使用文件, 方便使用者查詢API函式, 使用者可以透過連結方式觀看自己有興趣的部份, 不需從頭至尾看完整份文件資料.
+			    <a href="EasyPyOrders/html/index.html" target="_blank">
+				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
+				    EasyAPIOrders HTML
+			    </a>
+		    </p>		             
+                </div>
+		<div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="EasyPyOrders/EasyAPIOrders.pdf" download="EasyAPIOrders.pdf">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        EasyAPIOrders PDF!
+                    </a>    
+                </div>
+		<!--行情API-->
+		<!--
+		<div class="row">
+		    <p class="lead">
+			    此外, 為了服務廣大的程式交易客群, 我們也規劃提供國內外行情資訊API, 用戶只要透過簡單的幾行程式碼即可訂閱相關的RealTime Data, 並產生相對應的說明與使用文件.
+			    <a href="EasyPyConsumer/html/index.html" target="_blank">
+				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
+				    EasyPyConsumer HTML
+			    </a>
+		    </p>		             
+                </div>
+		<div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="EasyPyConsumer/EasyPyConsumer.pdf" download="EasyPyConsumer.pdf">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        EasyPyConsumer PDF!
+                    </a>    
+                </div>
+                -->
+            </div>
+        </header>
+	
+        <!-- Functions Section-->
+        <section class="page-section portfolio" id="portfolio">
+            <div class="container">
+                <!-- Functions Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0" data-toggle="tooltip" title="功能">Functions</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>		    
+                </div>
+		<br><h6 class="text-center text-capitalize text-secondar mb-0">Click Icon</h6>
+                <!-- Functions Grid Items-->
+                <div class="row justify-content-center">				
+					<!-- Functions Item 1-->
+					<div class="col-md-3 col-lg-3 mb-3">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-4x"></i></div>
+							</div>						
+							<img class="img-fluid" data-toggle="tooltip" src="assets/img/portfolio/order.png" alt="..." title="Trade(交易)"/>
+						</div>
+					</div>
+					<!-- Functions Item 2-->
+					<div class="col-md-3 col-lg-3 mb-3">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-4x"></i></div>
+							</div>
+							<img class="img-fluid" data-toggle="tooltip" src="assets/img/portfolio/report.png" alt="..." title="Replay(回報)"/>
+						</div>
+					</div>
+					<!-- Functions Item 3-->
+					<div class="col-md-3 col-lg-3 mb-3">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-4x"></i></div>
+							</div>
+							<img class="img-fluid" data-toggle="tooltip" src="assets/img/portfolio/query.png" alt="..." title="Query(查詢)"/>
+						</div>
+					</div>
+					<!-- Functions Item 4-->
+					<div class="col-md-3 col-lg-3 mb-3">
+						<div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
+							<div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+								<div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-4x"></i></div>
+							</div>														
+							<img class="img-fluid" data-toggle="tooltip" src="assets/img/portfolio/quote.jfif" altT="..." title="Quote(行情)"/>								
+						</div>
+					</div>		
+				</div>						              
+            </div>
+        </section>
+        <!-- Description Section-->
+	<!--
+        <section class="page-section bg-primary text-white mb-0" id="about">
+            <div class="container">
+                <!-- Description Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white" data-toggle="tooltip" title="描述">Description</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-darken">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Description Section Content-->
+                <div class="row">
+                    <div class="col-lg-4 ms-auto"><p class="lead">因為系統架構原故, EasyPy後端仍是介接原e01 API(未來另有規劃!). 為了讓用戶專注於交易策略開發, 故我們在EasyPy與e01 API間建立管理介面, 除了進行基本的委託控管(價量), 也方便使用者進行部位管理與制訂演算法交易. 而做為自建式的程式交易組件, 我們除了提供市場行情(縱斷面)外, 也提供部份總經數據及市場數據, 讓用戶開發橫斷面交易策略.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">@Q TEAM 是一個專注於程式、演算法及高頻交易的服務團隊, 我們的成員包含各類EA交易系統(STS, XQ, MultiCharts, Excel, R語言及Python)講師, 專業且親切的客服同仁, 以及專注於系統開發的經理人及工程師. 另外, 有別於其他團隊, 我們還加入了策略評量師與風險管理師等來服務廣大的程式交易客群.</p></div>
+                </div>
+                <!-- Description Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="file/Fubon EasyPy.docx" download="Fubon EasyPy.docx">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        Download Description File!
+                    </a>
+                </div>
+            </div>
+        </section>
+        -->
+        <!-- Examples Section-->
+        <!--
+        <section class="page-section" id="contact">
+            <div class="container">
+                <!-- Examples Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0"  data-toggle="tooltip" title="範例">Examples</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Examples Section Form-->
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-xl-7">
+                        <a>
+						
+                        </a>
+                    </div>
+                </div>
+				<!-- Examples Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-primary @if($user_type !== 0) discss @endif" href="{{ route('devicetype/edit', ['device_type' => $device_type->id]) }}" download="description file">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        Download Examples File(建置中...)!
+                    </a>
+                </div>
+            </div>
+        </section>
+        -->
+	<!-- Robot Section-->
+        <section class="page-section bg-primary text-white mb-0" id="robot">
+            <div class="container">
+                <!-- Description Section Heading-->
+                <h2 class="page-section-heading text-center text-uppercase text-white" data-toggle="tooltip" title="機器人">交易機器人Robot</h2>
+                <!-- Icon Divider-->
+                <div class="divider-custom divider-darken">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <!-- Description Section Content-->
+                <div class="row">
+		    <!--
+                    <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyAPI-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python與E01 API間的溝通, 除了進行基本的委託控管(價量)防止金手指事件外, 也方便使用者進行部位管理與制訂演算法, 讓用戶享有更多元的交易方式.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">另外, 我們的服務包含各類EA策略系統(STS, XQ, MultiCharts, Excel, R語言及Python). 因此, EasyPy-Chi亦可視為下單機器人, 在讀取買賣訊號及選股標的後, 協助這類EA系統完成交易或執行其它演算法交易, 並進行後續的部位管理工作.</p></div>
+                    -->		    
+                    <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyAPI-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python(建置中~)與E01 API間的溝通.</p></div>
+                    <div class="col-lg-4 me-auto"><p class="lead">交易機器人ROBOT, 主要功能在讀取買賣訊號及選股標的, 以完成後續交易流程. 支援STS, XQ, MultiCharts, Excel及R等所產生的買賣訊號, 並透過E01API完成交易.</p></div>
+                </div>
+		<div class="row">
+		    <p class="lead">
+			    第一部份: 交易機器人透過監控資料夾是否有異動.
+			    <br>1.建立交易機器人程式監控特定資料夾內的檔案是否發生異動.
+			    <br>2.安裝成功時, 用戶電腦在..\Program Files\Fubon-EasyPy\MonitorService\下建立相關程式, 檔案與組件.
+			    <br>3.若欲新增監控路徑, 可在上述根目錄內修改MonitorService.ini. 新增相對路徑(在根目錄內新增資料夾)及絶對路徑.
+			    <br>4.MonitorService相關安裝及操作說明.	
+			    <a href="MonitorService/index.html" target="_blank">
+				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
+				    MonitorService Video
+			    </a>
+			    <br>5.安裝程式如下.
+		    </p>            
+                </div>
+                <!-- Robot Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="MonitorService/SetupMonitorService.msi" download="SetupMonitorService.msi">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        Setup File!
+                    </a>
+                </div>
+            </div>
+        </section>
+        <!-- Footer-->
+        <footer class="footer text-center">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Location-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Location</h4>
+                        <h6 class="text-capitalize mb-1" align="left">
+                            <br><i class="fas fa-home fa-fw fa-1x" style="color:green"></i>
+								台北市大安區仁愛路四段169號3樓
+							<br><br><i class="fas fa-phone fa-fw fa-1x" style="color:aqua"></i>
+								02-87716888 #61342
+							<br><br><i class='fas fa-address-book fa-fw fa-1x' style="color:#006400"></i>
+								@Q TEAM						
+                        </h6>
+                    </div>
+                    <!-- Footer Social Icons-->
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Around the Web</h4>
+						<a class="btn btn-outline-light" href="#!" target="_blank" data-toggle="tooltip" title="GitHub"><i class="fab fa-fw fa-github" style="font-size:30px;color:#2196F3"></i></a>
+						<a class="btn btn-outline-light" href="#!" target="_blank" data-toggle="tooltip" title="GitLab"><i class="fab fa-fw fa-gitlab" style="font-size:30px;color:#2196F3"></i></a>
+                        <a class="btn btn-outline-light" href="#!" target="_blank" data-toggle="tooltip" title="Python"><i class="fab fa-fw fa-python" style="font-size:30px;color:#2196F3"></i></a>
+						<a class="btn btn-outline-light" href="#!" target="_blank" data-toggle="tooltip" title="Youtube"><i class="fab fa-fw fa-youtube" style="font-size:30px;color:#2196F3"></i></a>
+						<br><br>
+						<a class="btn btn-outline-light btn-social mx-1" href="#!" target="_blank" data-toggle="tooltip" title="facebook"><i class="fab fa-fw fa-facebook-f" style="font-size:30px;color:#006400"></i></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="#!" target="_blank" data-toggle="tooltip" title="instagram"><i class="fab fa-fw fa-instagram" style="font-size:30px;color:#006400"></i></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="#!" target="_blank" data-toggle="tooltip" title="twitter"><i class="fab fa-fw fa-twitter" style="font-size:30px;color:#006400"></i></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="#!" target="_blank" data-toggle="tooltip" title="linkedin"><i class="fab fa-fw fa-linkedin-in" style="font-size:30px;color:#006400"></i></a>
+						<br><br>
+						<a class="btn btn-outline-light btn-social mx-1" href="https://www.fubon.com/" target="_blank" data-toggle="tooltip" title="富邦金控"><i class="fas fa-landmark" style="font-size:30px;color:black"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.fubon-ebroker.com/" target="_blank" data-toggle="tooltip" title="富邦證券"><i class="fas fa-chart-line" style="font-size:30px;color:black"></i></a>
+						<a class="btn btn-outline-light btn-social mx-1" href="https://www.fubon.com/futures/home/index.htm" target="_blank" data-toggle="tooltip" title="富邦期貨"><i class="fas fa-balance-scale" style="font-size:30px;color:black"></i></a>                            
+						<!--<a class="btn btn-outline-light btn-social mx-1" href="#!"><i class="fab fa-fw fa-github"></i></a>-->						
+                    </div>
+                    <!-- Footer About Text-->
+                    <div class="col-lg-4">
+                        <h4 class="text-uppercase mb-4">About @Q TEAM</h4>
+                        <p class="lead mb-0">
+                            @Q TEAM 是富邦證券一個專業的服務團隊, 我們負責開發、評量及訓練有關程式交易的相關業務.
+                            <br><a href="#!">@Q TEAM</a>               
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Copyright Section-->
+        <div class="copyright py-4 text-center text-white">
+            <div class="container"><small>Copyright &copy; Fubon-EasyAPI Website 2022</small></div>
+        </div>
+        <!-- Portfolio Modals-->
+        <!-- Portfolio Modal 1-->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">TradePy</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <!--<img class="img-fluid rounded mb-5" src="assets/img/portfolio/cabin.png" alt="..." />-->
+									<h6 class="text-capitalize mb-1" align="left">Stock Order</h6>									
+									<img class="img-fluid rounded mb-5" src="assets/trade/stockOrder.PNG" alt="..." />
+									<h6 class="text-capitalize mb-1" align="left">Stock Change Price
+										<br>Two expressions for parameters in the method. (int or enum)
+									</h6>										
+									<img class="img-fluid rounded mb-5" src="assets/trade/stockChgPX.PNG" alt="..." />
+									<h6 class="text-capitalize mb-1" align="left">Stock Change Quantity
+										<br>Two expressions for parameters in the method. (int or enum)
+									</h6>									
+									<img class="img-fluid rounded mb-5" src="assets/trade/stockChgQty.PNG" alt="..." />
+									<h6 class="text-capitalize mb-1" align="left">Stock Cancel
+										<br>Two expressions for parameters in the method. (int or enum)
+									</h6>																		
+									<img class="img-fluid rounded mb-5" src="assets/trade/stockCancel.PNG" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">這裡我們使用最少參數的方式呈現, 讓使用者能夠輕鬆的利用API接口進行交易. 當然, 我們也有完整的參數(可選參數)讓使用者可以進行複雜的委託. 未來計劃將提供包含複委託、期貨、海外期貨及外匯保證金等的交易函式. 使用者可以下載說明文件及範例檔參考, 若有任何問題歡迎隨時與我們聯絡!</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 2-->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">ReplyPy</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+				    <h6 class="text-capitalize mb-1" align="left">Order Response</h6>
+                                    <img class="img-fluid rounded mb-5" src="assets/reply/stockResponse.PNG" alt="..." />
+				    <h6 class="text-capitalize mb-1" align="left">Request Report</h6>
+                                    <img class="img-fluid rounded mb-5" src="assets/reply/stockRequest.PNG" alt="..." />	
+				    <h6 class="text-capitalize mb-1" align="left">Execute Report</h6>
+                                    <img class="img-fluid rounded mb-5" src="assets/reply/stockExecute.PNG" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">Reply共包含三個部份, 一式回報為-下單回傳格式. 另外, 二式回報-分別是委託回報及成交回報格式. 我們讓回報傳換為類別變數, 方便供前端應用程式使用. 使用者若有任何問題歡迎隨時與我們聯絡!</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 3-->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">QueryPy</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">建置中.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Portfolio Modal 4-->
+        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content">
+                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
+                    <div class="modal-body text-center pb-5">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <!-- Portfolio Modal - Title-->
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">QuotePy</h2>
+                                    <!-- Icon Divider-->
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <!-- Portfolio Modal - Image-->
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />									
+                                    <!-- Portfolio Modal - Text-->
+                                    <p class="mb-4">建置中.</p>
+                                    <button class="btn btn-primary" data-bs-dismiss="modal">
+                                        <i class="fas fa-xmark fa-fw"></i>
+                                        Close Window
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <!-- * *                               SB Forms JS                               * *-->
+        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
+        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+		<script>
+			$(document).ready(function(){
+			  $('[data-toggle="tooltip"]').tooltip();   
+			});
+		</script>
+    </body>		
+</html>
