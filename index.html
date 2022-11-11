@@ -277,14 +277,14 @@ a:active {
                     <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyAPI-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python與E01 API間的溝通, 除了進行基本的委託控管(價量)防止金手指事件外, 也方便使用者進行部位管理與制訂演算法, 讓用戶享有更多元的交易方式.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">另外, 我們的服務包含各類EA策略系統(STS, XQ, MultiCharts, Excel, R語言及Python). 因此, EasyPy-Chi亦可視為下單機器人, 在讀取買賣訊號及選股標的後, 協助這類EA系統完成交易或執行其它演算法交易, 並進行後續的部位管理工作.</p></div>
                     -->		    
-                    <div class="col-lg-4 ms-auto"><p class="lead">Fubon EasyAPI-Chi是在EasyPy與E01 API間建立管理介面, 它負責Python(建置中~)與E01 API間的溝通.</p></div>
+                    <div class="col-lg-4 ms-auto"><p class="lead">FubonAPI套件是在EasyPy與E01 API間建立管理介面, 它負責Python(建置中~)與E01 API間的溝通.</p></div>
                     <div class="col-lg-4 me-auto"><p class="lead">交易機器人ROBOT, 主要功能在讀取買賣訊號及選股標的, 以完成後續交易流程. 支援STS, XQ, MultiCharts, Excel及R等所產生的買賣訊號, 並透過E01API完成交易.</p></div>
                 </div>
 		<div class="row">
 		    <p class="lead">
 			    第一部份: 交易機器人透過監控資料夾是否有異動.
 			    <br>1.建立交易機器人程式監控特定資料夾內的檔案是否發生異動.
-			    <br>2.安裝成功時, 用戶電腦在..\Program Files\Fubon-EasyPy\MonitorService\下建立相關程式, 檔案與組件.
+			    <br>2.安裝成功時, 用戶電腦在..\Roaming\FubonAPI套件\MonitorService\下建立相關程式, 檔案與組件, MonitorService運行於Windows服務中.
 			    <br>3.若欲新增監控路徑, 可在上述根目錄內修改MonitorService.ini. 新增相對路徑(在根目錄內新增資料夾)及絶對路徑.
 			    <br>4.MonitorService相關安裝及操作說明.	
 			    <a href="MonitorService/index.html" target="_blank">
@@ -298,7 +298,34 @@ a:active {
                 <div class="text-center mt-4">
                     <a class="btn btn-xl btn-outline-light" href="MonitorService/SetupMonitorService.msi" download="SetupMonitorService.msi">
                         <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
-                        Setup File!
+                        MonitorService Setup File!
+                    </a>
+                </div>
+		<div class="row">
+		    <p class="lead">
+			    第二部份: FubonAPI套件會接收MonitorService傳來的相關訊息.
+			    <br>1.安裝成功時, 用戶電腦在..\Roaming\Fubon\FubonAPI套件\下建立相關程式, 檔案與組件, Windows作業系統可正常運行.
+			    <br>2.若是收到訊號(0_...或1_...)將比對策略表單中是否有相對應的策略名稱並做後續相關檢核及動作.
+			    <br>3.若收到訊號檔名含.csv檔時, 會根據MonitorService傳來的檔案路徑去解讀該檔案後, 轉化成FubonAPI套件CD單可讀的對印檔並留存於根目錄.
+			    <br>  之後FubonAPI套件可在CD單功能中開啟該檔案修改或執行.
+			    <br>4.FubonAPI套件有基本的檢核機制, 如
+			    <br><blockquote>A.系統狀態檢核(E01登入, 策略表修改...)</blockquote>
+			    <br><blockquote>B.訊號及策略表單的參數(策略名稱, 帳號, 商品...)檢核.</blockquote>
+			    <br><blockquote>C.同帳號同商品每分鐘可下單的次數及金額限制.</blockquote>
+			    <br><blockquote>C.一鍵依帳號及,商品及回報表單狀態快速刪單.</blockquote>
+			    <br>5.FubonAPI套件相關安裝及操作說明.	
+			    <a href="FubonAPI套件/index.html" target="_blank">
+				    <i class="fab fa-staylinked" style="font-size:36px;color:Tomato"></i>
+				    FubonAPI套件 Video
+			    </a>
+			    <br>5.安裝程式如下.
+		    </p>            
+                </div>
+                <!-- Robot Section Button-->
+                <div class="text-center mt-4">
+                    <a class="btn btn-xl btn-outline-light" href="FubonAPI套件/SetupFubonAPI套件.msi" download="SetupFubonAPI套件.msi">
+                        <i class="fa-solid fa-download" style="font-size:36px;color:blue"></i>
+                        FubonAPI套件 Setup File!
                     </a>
                 </div>
             </div>
