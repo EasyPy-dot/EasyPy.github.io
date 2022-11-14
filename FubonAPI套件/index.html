@@ -54,13 +54,13 @@
 	    <p class="lead">
 		2.安裝後即可執行, 第一次運行時應用程式將建立Users\[UserName]\Fubon\FubonAPI套件\Strategy\策略表單存檔目錄, FubonAPI套件更新修正策略表單使用根目錄下Strategy\Strategy.html, FubonAPI套件是啟動及Strategy異動後讀取資料於記憶體中運行, 在更新表單及應用程式關閉時會釋放其記憶體以確保策略不會被觸發.
 	        <br>3.程式運行時若收到MonitorService送來的資料, 將檢核訊號與Strategy表單的參數, 於符合時才進行委託.
-			<br><li>首先, 檢核"執行", "策略名稱", "標的代碼".</li></br>
-			<br><li>之後, 檢核部位來判斷買賣, 這裡特別要提FubonAPI套件支援加碼功能, 計算公式如下. 當side>0時買進; 當side<0時賣出.</li></br>
+			<br>a.首先, 檢核"執行", "策略名稱", "標的代碼".</br>
+			<br>b.之後, 檢核部位來判斷買賣, 這裡特別要提FubonAPI套件支援加碼功能, 計算公式如下. 當side>0時買進; 當side<0時賣出.</br>
 			<br>newPosition = signalPosition - tablePosition</br>
 			<br>side = newPosition + signalPosition</br>
 			<br>tablePosition = tablePosition + newPosition</br>
-			<br><li>再來, 檢核帳號是否符合E01可執行之帳號.</li></br>
-			<br><li>最後, 檢核一分鐘內的下單次數與金額(同帳號, 商品及買賣方向), 目前預設一分鐘內的限制為5次及1百萬.</li></br>
+			<br>c.再來, 檢核帳號是否符合E01可執行之帳號.</br>
+			<br>d.最後, 檢核一分鐘內的下單次數與金額(同帳號, 商品及買賣方向), 目前預設一分鐘內的限制為5次及1百萬.</br>
 	    </p>
 	</div>
 	<div class="text-center mt-4"> 
