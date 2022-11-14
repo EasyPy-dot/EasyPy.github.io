@@ -68,28 +68,51 @@
 	<div class="text-center mt-4"> 
 	    <p><span style="color: orange; font-weight: bold">根目錄</span></p>
 	    <img src="path.PNG" alt="page" width="600" height="480">
-	    <p><span style="color: orange; font-weight: bold">服務</span></p>
-	    <img src="service.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">Strategy根目錄</span></p>
+	    <img src="strategyPath.PNG" alt="page" width="600" height="400">
 	</div>
 	<div class="row">
 	    <p class="lead">
-	        3.此服務在主機啟動時即運行, 監控檔案路徑的時間為每日早上06:00開始, 05:00結束. 即主機在沒有關閉且服務運行的情況下, 這段時間內都會監控其相關路徑.
+	        4.FubonAPI套件目前提供接收Signal及File的功能, Signal部份用戶必須建立策略表單. File部份目前僅限讀取XQ/XS產出的csv檔, 之後轉化為FubonAPI套件可讀資料, 再由用戶端進行參數修改.
+		<br>5.目前FubonAPI套件並無RealTime Data, 因此是透過查詢基本市況報導網站資料取得近似行情資料. 這點需要請用戶特別注意, 若是用戶策略需要非常精準的行情資料目前我們無法提供.
+		<br>6.FubonAPI套件提供單筆刪單、依帳號及標的多筆刪單及依帳號全部刪單功能.
+		<br>7.CD單建置如下
+		    <ul>
+			<li><a>確認帳戶, 標的, 買賣方向及總交易數量.</a></li>
+			<li><a>單次交易可給一個確定價格, 多次交易則可給B+(bid)或A-(bid), 系統會自行去抓當時的成交價(+/-)(tick * bid)作為委託價.</a></li>
+			<li><a>開始執行時間.</a></li>
+			<li><a>若為多筆交易則需設定每次交易的間隔時間(以秒為單位)及交易的執行次數.</a></li>
+		    </ul>
 	    </p>
 	</div>
+	<div class="text-center mt-4"> 
+	    <p><span style="color: orange; font-weight: bold">根目錄</span></p>
+	    <img src="path.PNG" alt="page" width="600" height="480">
+	    <p><span style="color: orange; font-weight: bold">Strategy根目錄</span></p>
+	    <img src="strategyPath.PNG" alt="page" width="600" height="400">
+	</div>		
     </div>
 			
 			
     <div class="container">
 	 <div class="row">
                <p class="lead">
-			訊號範例如下:
-			
+			FubonAPI套件基本操作如下:
+			<ul>
+			    <li><a>點擊ICON.</a></li>
+			    <li><a>選擇是否更新檔案.</a></li>
+			    <li><a>帳號, 密碼及憑證檢核.</a></li>
+			    <li><a>登入後檢查E01回傳帳號是否正確.</a></li>
+			    <li><a>建立策略表單, 待有訊號是觸發交易.</a></li>
+			    <li><a>若收到csv檔, 開啟根目錄轉化後的定時定次格式.csv檔案, 並修正其參數後執行交易.</a></li>
+			    <li><a>根據交易回報結果判斷是否需要進行人工刪改單.</a></li>
+			</ul>
 		</p>       
      </div>			
      <div class="text-center mt-4">              
          <video width="600" height="480" controls>
-             <source src="video/ms.mp4" type="video/mp4">
-                 MonitorService安裝與操作.
+             <source src="video/fubonAPI.mp4" type="video/mp4">
+                 FubonAPI套件安裝與操作.
          </video>   
      </div>			
  </main>			
