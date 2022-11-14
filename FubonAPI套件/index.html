@@ -57,9 +57,9 @@
 		    <ul>
 			<li><a>首先, 檢核"執行", "策略名稱", "標的代碼".</a></li>
 			<li><a>之後, 檢核部位來判斷買賣, 這裡特別要提FubonAPI套件支援加碼功能, 計算公式如下. 當side>0時買進; 當side<0時賣出.</a></li>
-			<br><a>newPosition = signalPosition - tablePosition</a></br>
-			<br><a>side = newPosition + signalPosition</a></br>
-			<br><a>tablePosition = tablePosition + newPosition</a></br>
+			<br><a>newPosition = signalPosition - tablePosition</a>
+			<br><a>side = newPosition + signalPosition</a>
+			<br><a>tablePosition = tablePosition + newPosition</a>
 			<li><a>再來, 檢核帳號是否符合E01可執行之帳號.</a></li>
 			<li><a>最後, 檢核一分鐘內的下單次數與金額(同帳號, 商品及買賣方向), 目前預設一分鐘內的限制為5次及1百萬.</a></li>
 		    </ul>
