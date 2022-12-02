@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description" content="">
+	<meta name="author" content="CraftingGamerTom">
+
+	<title>EasyAPI-Chi bootstrap table</title>
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+	<!-- JQuery library -->
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SBxGYnUkunIxVxAv/UtMOhba/xskxh" crossorigin="anonymous"></script>	
+	
+	<style>
+		body { background-color: #fafafa; }
+		table {width: 100%;}
+	</style>
+</head>
+<body>
+<div id="jquery-script-menu">
+	<div class="jquery-script-center">
+	<ul>
+		<li><a>FUBON Securities Co., Ltd.</a></li>
+		<li><a">@QTeamAddIn Description Page, @Q Team</a></li>
+	</ul>
+	<div id="carbon-block"></div>	
+  </div>
+</div>
+      
+<main role="main" class="container-fluid" style="margin-top:150px;">
+    <div class="container">
+	<div class="row">
+            <p class="lead">
+		1.QTeamSetup一鍵安裝檔, 建立根目錄於Program Files\QTeam\QTeamSetup\, 且於桌面及開始工具列建立捷徑. 
+		(@QTeam壓縮檔, 下載解壓縮後執行RegisterCOM.bat可完成x64_x86不同作業系統的COM註冊.)
+	    </p>
+        </div>
+	<div class="text-center mt-4"> 
+			<p><span style="color: orange; font-weight: bold">下載</span></p>
+	    <img src="page.PNG" alt="page" width="600" height="480">
+	    <p><span style="color: orange; font-weight: bold">點擊</span></p>
+	    <img src="download.PNG" alt="page" width="600" height="240">
+	    <p><span style="color: orange; font-weight: bold">其它資訊</span></p>
+	    <img src="install1.PNG" alt="page" width="600" height="480">
+	    <p><span style="color: orange; font-weight: bold">仍要執行, 因需管理者權限, 故會跳至管理者安裝畫面按下"是"</span></p>
+	    <img src="install2.PNG" alt="page" width="600" height="480">
+	    <p><span style="color: orange; font-weight: bold">關閉</span></p>
+	    <img src="install3.PNG" alt="page" width="600" height="480">
+	</div>
+	<div class="row">
+	    <p class="lead">
+		2.安裝後會直接將COM元件註冊, 開啟Excel即可見已註冊的COM元件, 元件由兩部份組成一為可視化UI, 另一個為Functions可協助用戶建立訊號.
+	        <br>3.UI的部份, 目前僅提供少數(主要的原因是後端未建立資料庫)幾個網路抓取相關資料的選項.
+		    <ul>
+			<li><a>首先, 在選單中選擇欲拉取的資料".</a></li>
+			<li><a>之後, 程式會將相對應資料建立於當前的工作表, 若要抓取多個資料自先建立新工作表後再選取該選項.</a></li>
+		    </ul>
+	    </p>
+	</div>
+	<div class="text-center mt-4"> 
+	    <p><span style="color: orange; font-weight: bold">根目錄</span></p>
+	    <img src="path.PNG" alt="page" width="600" height="380">
+	    <p><span style="color: orange; font-weight: bold">Strategy根目錄</span></p>
+	    <img src="strategyPath.PNG" alt="page" width="600" height="400">
+	</div>
+	<div class="row">
+	    <p class="lead">
+	    4.Functions部份, 主要是協助使用Excel用戶方便建立訊號檔提供給FubonAPI套件進行交易.
+		    <ul>
+			<li><a>QTeamTest測試函數, 回傳值: QTeam Test OK.</a></li>
+			<li><a>WatchRoot函數, 回傳值: 回傳Excel根目錄.</a></li>
+			<li><a>CreateFile函數, 產生一個訊號檔於Excel根目錄作為驗測. 回傳值: bool</a></li>
+			<li><a>CreateSignal函數, 產生一個訊號檔於MonitorService監控目錄. 回傳值: bool</a></li>
+		    </ul>
+	    </p>
+	</div>
+<!--
+	<div class="text-center mt-4"> 
+	    <p><span style="color: orange; font-weight: bold">更新及登入頁面, 若有檔案更新系統提供線上更新; 第一次登入需建立用戶資料</span></p>
+	    <img src="login.PNG" alt="page" width="600" height="480">
+	    <p><span style="color: orange; font-weight: bold">FubonAPI套件</span></p>
+	    <img src="mainPage.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">Strategy主頁面點選Auto鍵進入Strategy(.html)</span></p>
+	    <img src="openStrategy.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">選擇鍵, 選擇策略表單目錄下的Strategy.json檔</span></p>
+	    <img src="selectStrategy.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">New Row鍵, 建立新的Rows, Action Column點擊編輯鍵編輯, 確認鍵建檔</span></p>
+	    <img src="createStrategy.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">Save鍵, 儲存Strategy表單</span></p>
+	    <img src="saveStrategy.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">確認Strategy存檔內容</span></p>
+	    <img src="checkStrategy.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">若發現存檔內容與建立的表單有異, 請再開啟一次表單進行再確認.</span></p>
+	    <img src="doubleCheckStrategy.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">若MonitorService送出MonitorType: File時, FubonAPI套件會收到</span></p>
+	    <img src="getCD.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">此時, 系統根目錄會產生一個轉化後的檔定, 用戶可開啟這檔案進行修改或</span></p>
+	    <img src="rootPath.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold">開啟CD單頁面, 並匯入資料後即可修改資料(可匯出), 確認後即可單擊執行鍵運行.</span></p>
+	    <img src="cdPage.PNG" alt="page" width="600" height="400">
+	    <p><span style="color: orange; font-weight: bold"></span></p>
+	    <img src="importData.PNG" alt="page" width="600" height="400">
+	</div>	
+-->	
+    </div>
+			
+			
+    <div class="container">
+	 <div class="row">
+               <p class="lead">
+			@QTeamAddIn基本操作如下:
+			<br>
+			<ul>
+			    <li><a>開啟Excel.</a></li>
+			    <li><a>選擇@QTeam.</a></li>
+			    <li><a>1.可在UI上選擇所需查詢的資料選項, 回傳資將寫入當前的工作表.</a></li>
+			    <li><a>2.測試函數QTeamTest(回傳QTeam Test OK.), WatchRoot(回傳Excel根目錄), CreateFile(產生測試訊號檔至Excel根目錄).</a></li>
+			    <li><a>3.函數CreateSignal(建立訊號檔案至 MonitorService的監控資料夾.), 配合FubonAPI套件即可完成交易.</a>
+			</ul>
+		</p>       
+     </div>			
+     <div class="text-center mt-4">              
+         <video width="600" height="480" controls>
+             <source src="video/@QTeam.mp4" type="video/mp4">
+                 @QTeamAddIn安裝與操作.
+         </video>   
+     </div>			
+ </main>			
+</body>
+</html>
