@@ -1,1 +1,1 @@
-# Fubon-EasyPy.github.io
+# EasyPy.github.io
