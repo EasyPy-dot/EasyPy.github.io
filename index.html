@@ -1027,7 +1027,7 @@
                           <!--<li class=""><a href="#examples-Developers-receiveQuote-0-groovy">Groovy</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-receiveQuote-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Developers-receiveQuote-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Developers-receiveQuote-0-angular">Angular</a></li>-->
+                          <!--<li class=""><a href="#examples-Developers-receiveQuote-0-node">Node</a></li>-->
                           <li class=""><a href="#examples-Developers-receiveQuote-0-csharp">C#</a></li>
                           <!--<li class=""><a href="#examples-Developers-receiveQuote-0-php">PHP</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-receiveQuote-0-perl">Perl</a></li>-->
@@ -1065,22 +1065,25 @@ public class DevelopersApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Developers-receiveQuote-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DevelopersApi;
+                          <div class="tab-pane" id="examples-Developers-receiveQuote-0-node">
+                            <pre class="prettyprint"><code class="language-java">
+var WebSocket = require('faye-websocket');
+var client = new WebSocket.Client('ws://localhost:8080/QuoteService');
 
-public class DevelopersApiExample {
+client.on('open', function(message) {
+    client.send('{\'event\': \'Initial\'}');
+});
 
-    public static void main(String[] args) {
-        DevelopersApi apiInstance = new DevelopersApi();
-        try {
-            ConnectionResponse result = apiInstance.receiveQuote();
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DevelopersApi#receiveQuote");
-            e.printStackTrace();
-        }
-    }
-}</code></pre>
+client.on('message', function(message) {
+    if (message.data.includes("MDC Complete"))
+        client.send("{\"event\":\"subscribes\", \"data\": [{\"exchange\": \"TAIFEX\", \"symbols\": [\"EXFG3\",\"MXFG3\",\"TXFG3\"]},{\"exchange\": \"TWSE\", \"symbols\": [\"2330\", \"2317\", \"2881\"]}]}");
+  console.log("Current time on server is: '" + message.data + "'");
+});
+
+client.on('close', function(message) {
+  console.log('Connection closed!', message.code, message.reason);
+});
+</code></pre>
                           </div>
   <!--
   <div class="tab-pane" id="examples-Developers-receiveQuote-0-groovy">
