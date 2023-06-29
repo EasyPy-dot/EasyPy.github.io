@@ -996,7 +996,7 @@
 			<h3>這裡</h3>
 			<h4>
 				<br>C-Sharp: 使用WebSocketSharp第三方套件.
-				<br>NodeJS:  使用faye-websocket, request等第三方套件.
+				<br>NodeJS:  使用faye-websocket, request等第三方套件. 另外, 若需要CA憑證可至https://certifiio.readthedocs.io/en/latest/下載.
 				<br>Pythonn: 使用Websocket-client, rel, _thread, requests等第三方套件.
 			</h4>
           </div>
@@ -1405,7 +1405,7 @@ if __name__ == "__main__":
                           <!--<li class=""><a href="#examples-Developers-searchCagtegoryitem-0-groovy">Groovy</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchCagtegoryitem-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Developers-searchCagtegoryitem-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Developers-searchCagtegoryitem-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Developers-searchCagtegoryitem-0-node">Node</a></li>
                           <li class=""><a href="#examples-Developers-searchCagtegoryitem-0-csharp">C#</a></li>
                           <!--<li class=""><a href="#examples-Developers-searchCagtegoryitem-0-php">PHP</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchCagtegoryitem-0-perl">Perl</a></li>-->
@@ -1444,23 +1444,28 @@ public class DevelopersApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Developers-searchCagtegoryitem-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DevelopersApi;
+                          <div class="tab-pane" id="examples-Developers-searchCagtegoryitem-0-node">
+                            <pre class="prettyprint"><code class="language-java">
+var request = require('request');
+var fs = require('fs');
+var url = 'https://localhost:5001/api/Category/CBT';
 
-public class DevelopersApiExample {
-
-    public static void main(String[] args) {
-        DevelopersApi apiInstance = new DevelopersApi();
-        String exchange = exchange_example; // String | 查詢該交易所的所有商品品類
-        try {
-            array[CategoryItem] result = apiInstance.searchCagtegoryitem(exchange);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DevelopersApi#searchCagtegoryitem");
-            e.printStackTrace();
-        }
+request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'},
+    rejectUnauthorized: false,
+    ca: fs.readFileSync("certs.pem")
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.statusCode);
+    } else {
+      console.log(data);
     }
-}</code></pre>
+});
+</code></pre>
                           </div>
   <!--
   <div class="tab-pane" id="examples-Developers-searchCagtegoryitem-0-groovy">
@@ -1744,7 +1749,7 @@ print(data)
                           <!--<li class=""><a href="#examples-Developers-searchCategory-0-groovy">Groovy</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchCategory-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Developers-searchCategory-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Developers-searchCategory-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Developers-searchCategory-0-node">Node</a></li>
                           <li class=""><a href="#examples-Developers-searchCategory-0-csharp">C#</a></li>
                           <!--<li class=""><a href="#examples-Developers-searchCategory-0-php">PHP</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchCategory-0-perl">Perl</a></li>-->
@@ -1782,22 +1787,28 @@ public class DevelopersApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Developers-searchCategory-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DevelopersApi;
+                          <div class="tab-pane" id="examples-Developers-searchCategory-0-node">
+                            <pre class="prettyprint"><code class="language-java">
+var request = require('request');
+var fs = require('fs');
+var url = 'https://localhost:5001/api/Category';
 
-public class DevelopersApiExample {
-
-    public static void main(String[] args) {
-        DevelopersApi apiInstance = new DevelopersApi();
-        try {
-            array[CategoryItems] result = apiInstance.searchCategory();
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DevelopersApi#searchCategory");
-            e.printStackTrace();
-        }
+request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'},
+    rejectUnauthorized: false,
+    ca: fs.readFileSync("certs.pem")
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.statusCode);
+    } else {
+      console.log(data);
     }
-}</code></pre>
+});
+</code></pre>
                           </div>
   <!--
   <div class="tab-pane" id="examples-Developers-searchCategory-0-groovy">
@@ -2045,7 +2056,7 @@ print(data)
                           <!--<li class=""><a href="#examples-Developers-searchCoding-0-groovy">Groovy</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchCoding-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Developers-searchCoding-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Developers-searchCoding-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Developers-searchCoding-0-node">Node</a></li>
                           <li class=""><a href="#examples-Developers-searchCoding-0-csharp">C#</a></li>
                           <!--<li class=""><a href="#examples-Developers-searchCoding-0-php">PHP</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchCoding-0-perl">Perl</a></li>-->
@@ -2083,22 +2094,28 @@ public class DevelopersApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Developers-searchCoding-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DevelopersApi;
+                          <div class="tab-pane" id="examples-Developers-searchCoding-0-node">
+                            <pre class="prettyprint"><code class="language-java">
+var request = require('request');
+var fs = require('fs');
+var url = 'https://localhost:5001/api/Coding';
 
-public class DevelopersApiExample {
-
-    public static void main(String[] args) {
-        DevelopersApi apiInstance = new DevelopersApi();
-        try {
-            CodingItems result = apiInstance.searchCoding();
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DevelopersApi#searchCoding");
-            e.printStackTrace();
-        }
+request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'},
+    rejectUnauthorized: false,
+    ca: fs.readFileSync("certs.pem")
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.statusCode);
+    } else {
+      console.log(data);
     }
-}</code></pre>
+});
+</code></pre>
                           </div>
   <!--
   <div class="tab-pane" id="examples-Developers-searchCoding-0-groovy">
@@ -2342,7 +2359,7 @@ print(data)
                           <!--<li class=""><a href="#examples-Developers-searchExchange-0-groovy">Groovy</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchExchange-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Developers-searchExchange-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Developers-searchExchange-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Developers-searchExchange-0-node">Node</a></li>
                           <li class=""><a href="#examples-Developers-searchExchange-0-csharp">C#</a></li>
                           <!--<li class=""><a href="#examples-Developers-searchExchange-0-php">PHP</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-searchExchange-0-perl">Perl</a></li>-->
@@ -2380,22 +2397,28 @@ public class DevelopersApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Developers-searchExchange-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DevelopersApi;
+                          <div class="tab-pane" id="examples-Developers-searchExchange-0-node">
+                            <pre class="prettyprint"><code class="language-java">
+var request = require('request');
+var fs = require('fs');
+var url = 'https://localhost:5001/api/Exchange';
 
-public class DevelopersApiExample {
-
-    public static void main(String[] args) {
-        DevelopersApi apiInstance = new DevelopersApi();
-        try {
-            array[ExchangeItems] result = apiInstance.searchExchange();
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DevelopersApi#searchExchange");
-            e.printStackTrace();
-        }
+request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'},
+    rejectUnauthorized: false,
+    ca: fs.readFileSync("certs.pem")
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.statusCode);
+    } else {
+      console.log(data);
     }
-}</code></pre>
+});
+</code></pre>
                           </div>
   <!--
   <div class="tab-pane" id="examples-Developers-searchExchange-0-groovy">
@@ -2643,7 +2666,7 @@ print(data)
                           <!--<li class=""><a href="#examples-Developers-search分點進出-0-groovy">Groovy</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-search分點進出-0-objc">Obj-C</a></li>-->
                           <li class=""><a href="#examples-Developers-search分點進出-0-javascript">JavaScript</a></li>
-                          <!--<li class=""><a href="#examples-Developers-search分點進出-0-angular">Angular</a></li>-->
+                          <li class=""><a href="#examples-Developers-search分點進出-0-node">Node</a></li>
                           <li class=""><a href="#examples-Developers-search分點進出-0-csharp">C#</a></li>
                           <!--<li class=""><a href="#examples-Developers-search分點進出-0-php">PHP</a></li>-->
                           <!--<li class=""><a href="#examples-Developers-search分點進出-0-perl">Perl</a></li>-->
@@ -2682,23 +2705,28 @@ public class DevelopersApiExample {
 }</code></pre>
                           </div>
 
-                          <div class="tab-pane" id="examples-Developers-search分點進出-0-android">
-                            <pre class="prettyprint"><code class="language-java">import io.swagger.client.api.DevelopersApi;
+                          <div class="tab-pane" id="examples-Developers-search分點進出-0-node">
+                            <pre class="prettyprint"><code class="language-java">
+var request = require('request');
+var fs = require('fs');
+var url = 'https://localhost:5001/api/分點進出/2881';
 
-public class DevelopersApiExample {
-
-    public static void main(String[] args) {
-        DevelopersApi apiInstance = new DevelopersApi();
-        String symbol = symbol_example; // String | 查詢標的商品的分點進出買賣資料
-        try {
-            SymbolItem result = apiInstance.search分點進出(symbol);
-            System.out.println(result);
-        } catch (ApiException e) {
-            System.err.println("Exception when calling DevelopersApi#search分點進出");
-            e.printStackTrace();
-        }
+request.get({
+    url: url,
+    json: true,
+    headers: {'User-Agent': 'request'},
+    rejectUnauthorized: false,
+    ca: fs.readFileSync("certs.pem")
+  }, (err, res, data) => {
+    if (err) {
+      console.log('Error:', err);
+    } else if (res.statusCode !== 200) {
+      console.log('Status:', res.statusCode);
+    } else {
+      console.log(data);
     }
-}</code></pre>
+});
+</code></pre>
                           </div>
   <!--
   <div class="tab-pane" id="examples-Developers-search分點進出-0-groovy">
