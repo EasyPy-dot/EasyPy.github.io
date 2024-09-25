@@ -1,1 +1,1 @@
-# EasyPy-dot.github.io
+# EasyDot.github.io
